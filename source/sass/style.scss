@@ -1,5 +1,142 @@
-$bg: #000;
+$w: 1170px;
+$m: 0 auto;
+$p: 0 115px;
+$green: #00897b;
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("../fonts/opensans-regular.woff2") format("woff2"),
+	     url("../fonts/opensans-regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Open Sans Light";
+	src: url("../fonts/opensans-light.woff2") format("woff2"),
+	     url("../fonts/opensans-light.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Open Sans Bold";
+	src: url("../fonts/opensans-bold.woff2") format("woff2"),
+	     url("../fonts/opensans-bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Open Sans Semibold";
+	src: url("../fonts/opensans-semibold.woff2") format("woff2"),
+	     url("../fonts/opensans-semibold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Roboto Bold";
+	src: url("../fonts/roboto-bold.woff2") format("woff2"),
+	     url("../fonts/roboto-bold.woff") format("woff");
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
 
 body {
-	background-color: $bg;
+	width: $w;
+	margin: $m;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 22px;
+	color: #212121;
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%; 
+	height: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #212121;
+}
+
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__logo {
+		font-family: 'Open Sans Bold';
+		font-size: 25px;
+		text-transform: capitalize;
+		padding: 50px 0;
+	}
+
+	&__list {
+		width: 702px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		font-family: 'Open Sans Semibold';
+		font-size: 20px;
+		letter-spacing: 1px;
+	}
+}
+
+.front {
+	background: #000 url('../img/bg.png') 0 -76px no-repeat;
+	background-size: cover;
+	width: 100vw;
+	margin: 0 calc(-50vw + 50%);
+	padding: $p;
+	padding-top: 194px;
+	padding-bottom: 70px;
+	color: #fff;
+	text-align: center;
+	&__title {
+		font-family: 'Open Sans Semibold';
+		font-size: 60px;
+	}
+
+	&__text {
+		font-size: 22px;
+		margin-top: 48px;
+	}
+
+	&__button {
+		margin-top: 108px;
+		&--our {
+			margin-left: 21px;
+		}
+	}
+
+	&__arrow {
+		font-size: 25px;
+		color: #fff;
+		display: block;
+		margin-top: 92px;
+	}
+}
+
+.button {
+	font-family: 'Roboto Bold';
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: transparent;
+	border: 3px solid #fff;
+	padding: 21px 39px;
+	display: inline-block;
+	&--active {
+		border: none;
+		background-color: $green;
+		padding: 24px 52px;
+	}
 }
