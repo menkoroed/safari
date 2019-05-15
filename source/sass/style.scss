@@ -67,6 +67,15 @@ a {
 	color: #212121;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
 .page-header {
 	display: flex;
 	justify-content: space-between;
@@ -336,7 +345,7 @@ a {
 		position: absolute;
 		top: 0;
 		width: 100%;
-		height: 100%;
+		height: 99%;
 		background-color: rgba(0, 0, 0, 0.5);
 		padding-top: 147px;
 		opacity: 0;
@@ -363,6 +372,7 @@ a {
 	&__list {
 		display: flex;
 		justify-content: space-between;
+		margin-top: 123px;
 	}
 
 	&__item {
@@ -434,5 +444,257 @@ a {
 		&.button--active {
 			padding: 19px 24px;
 		}
+	}
+}
+
+.member {
+	padding: 123px 0;
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		text-transform: capitalize;
+		letter-spacing: 0.75px;
+		margin: 125px 0;
+	}
+
+	&__title {
+		font-family: 'Open Sans Semibold';
+		font-size: 20px;
+		letter-spacing: 1px;
+		margin-top: 30px;
+		margin-bottom: 8px;
+	}
+
+	&__inner {
+		&-list {
+			display: flex;
+			justify-content: space-between;
+			width: 270px;
+			margin: $m;
+			margin-top: 25px;
+		}
+
+		&-item {
+			width: 50px;
+			padding: 9.3px;
+			background-color: #f0f1f1;
+			border-radius: 10px;
+			&:hover {
+				background-color: #3949ab;
+				.member__inner-link {
+					color: #fff;
+				}
+			}
+		}
+
+		&-link {
+			font-size: 30px;
+			color: $green;
+			letter-spacing: 1.5px;
+		}
+	}
+
+	&__pagination {
+		&s {
+			display: flex;
+			justify-content: space-between;
+			width: 64px;
+			margin: $m;
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 15px;
+		height: 15px;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: $green;
+		}
+
+		&--active::before {
+			background-color: #3949ab;
+		}
+	}
+}
+
+.blog {
+	padding: 125px 115px;
+	background-color: #e4fdf9;
+	&__list,
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__list {
+		flex-wrap: wrap;
+		margin: 124px 0;
+	}
+
+	&__img {
+		order: 0;
+		&--center {
+			order: 1;
+		}
+	}
+
+	&__content {
+		text-align: left;
+		padding-right: 134px;
+	}
+
+	&__title {
+		margin-top: 62px;
+		font-family: 'Open Sans Semibold';
+		font-size: 25px;
+		letter-spacing: 1.25px;
+		text-transform: capitalize;
+		&:hover {
+			color: $green;
+			cursor: url('../img/hand-pointer.svg'), auto;
+		}
+	}
+
+	&__time,
+	&__development {
+		display: inline-block;
+		font-family: 'Open Sans Semibold';
+		font-size: 17px;
+		letter-spacing: 0.85px;
+		margin: 27px 0;
+	}
+
+	i {
+		font-size: 17px;
+		letter-spacing: 0.85px;
+		color: #212121;
+		margin-right: 7px;
+	}
+
+	&__text {
+		width: 434px;
+		letter-spacing: 0.75px;
+		&--top {
+			width: 450px;
+			margin-right: -15px;
+		}
+	}
+}
+
+.contact {
+	padding: 110px 185px;
+	padding-top: 128px;
+	background: #212121 url('../img/bg2.png') 0 0 no-repeat;
+	background-size: cover;
+	color: #fff;
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 98px;
+	}
+
+	&__item {
+		font-family: 'Open Sans Semibold';
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: 1px;
+		position: relative;
+		padding-top: 140px;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&::before {
+			top: 22px;
+			width: 62px;
+			height: 62px;
+			background-repeat: no-repeat;
+			z-index: 1;
+		}
+
+		&::after {
+			top: 0;
+			width: 105px;
+			height: 105px;
+			border-radius: 50%;
+			background-color: #3949ab;
+		}
+
+		&--address::before {
+			width: 44px;
+			background-image: url('../img/placeholder.png');
+		}
+
+		&--tel::before {
+			background-image: url('../img/phone.png');
+		}
+
+		&--mail::before {
+			top: 32px;
+			height: 44px;
+			background-image: url('../img/mail.png');
+		}
+	}
+
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 80px;
+	}
+
+	&__input,
+	&__area {
+		font-family: 'Open Sans Semibold';
+		font-size: 20px;
+		line-height: 28px;
+		text-transform: capitalize;
+		color: #212121;
+		letter-spacing: 1px;
+		border: none;
+		border-radius: 10px;
+		padding: 28px 21px;
+		width: 500px;
+	}
+
+	&__area {
+		width: 100%;
+		min-height: 323px;
+		margin: 33px 0 39px;
+	}
+
+	&__send {
+		font-family: 'Roboto Bold';
+		font-size: 20px;
+		line-height: 22px;
+		letter-spacing: 1px;
+		color: #212121;
+		text-transform: uppercase;
+		margin-left: auto;
+		border: none;
+		border-radius: 10px;
+		padding: 24px 0;
+		width: 220px;
+		background-color: #fff;
+	}
+}
+
+.page-footer {
+	&__text {
+		font-family: 'Roboto Bold';
+		font-size: 20px;
+		letter-spacing: 1px;
+		padding: 20px 0;
 	}
 }
